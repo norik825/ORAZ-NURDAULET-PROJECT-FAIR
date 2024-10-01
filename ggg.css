@@ -1,0 +1,24 @@
+.marquee {
+  /* Ширина контейнера */ /* Скрыть изображение за пределами контейнера */
+  box-sizing: border-box; /* Для корректного расчета размеров */
+  white-space: nowrap;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.marquee img {
+  display: inline-block; /* Внутри контейнера */
+  animation: marquee 10s linear infinite; /* Анимация движения */
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(80%); /* Начальная точка за пределами экрана справа */
+  }
+  to {
+    transform: translateX(-600%); /* Конечная точка за пределами экрана слева */
+  }
+}
+.run {
+  padding-top: 0px;
+}
